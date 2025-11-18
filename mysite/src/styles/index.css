@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================
+   HERO & BACKGROUND ANIMATIONS
+============================= */
+
+/* Gradient animé du Hero */
+.hero-animated-bg {
+  background: linear-gradient(120deg, #2563eb, #4f46e5, #3b82f6, #2563eb);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient + glow pour le texte Typing effect */
+.typed-premium {
+  font-weight: 600; /* semi-bold */
+  font-size: inherit;
+  background: linear-gradient(90deg, #93c5fd, #2563eb, #fbbf24, #4ade80, #f472b6);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientGlow 8s ease infinite;
+  text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+@keyframes gradientGlow {
+  0% { background-position: 0% 50%; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
+  25% { background-position: 50% 50%; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+  50% { background-position: 100% 50%; text-shadow: 0 0 15px rgba(255,255,255,0.4); }
+  75% { background-position: 50% 50%; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+  100% { background-position: 0% 50%; text-shadow: 0 0 5px rgba(255,255,255,0.2); }
+}
+
+/* =============================
+   ANIMATIONS D’APPARITION
+============================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpAnim 1s forwards;
+}
+
+.fade-up.delay-100 { animation-delay: 0.1s; }
+.fade-up.delay-200 { animation-delay: 0.2s; }
+.fade-up.delay-300 { animation-delay: 0.3s; }
+.fade-up.delay-400 { animation-delay: 0.4s; }
+.fade-up.delay-500 { animation-delay: 0.5s; }
+
+@keyframes fadeUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   IMAGE OVERLAY & HOVER EFFECT
+============================= */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.image-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(147,197,253,0.3));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.image-overlay img {
+  transition: transform 0.5s ease;
+}
+
+.image-overlay:hover img {
+  transform: scale(1.05);
+}
+
+/* =============================
+   CARTES / BOXES
+============================= */
+.service-card,
+.portfolio-card,
+.testimonial-card {
+  background-color: #f9fafb; /* gray-50 */
+  border-radius: 0.75rem; /* rounded-xl */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* =============================
+   LIENS / CTA
+============================= */
+a.cta-button {
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.cta-button:hover {
+  background-color: #f3f4f6; /* gray-100 */
+  transform: translateY(-2px);
+}
+
+/* =============================
+   UTILITAIRES SUPPLÉMENTAIRES
+============================= */
+.text-gradient {
+  background: linear-gradient(90deg, #2563eb, #4f46e5, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.shadow-glow {
+  text-shadow: 0 0 10px rgba(59,130,246,0.5);
+}

@@ -1,0 +1,42 @@
+# Environnement virtuel
+venv/
+env/
+
+# Fichiers Python générés
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environnement de configuration
+.env
+*.env
+
+# Base de données locale
+db.sqlite3
+
+# Logs
+*.log
+
+# Static files collectés automatiquement
+/staticfiles/
+staticfiles/
+static/
+
+# Cache Django
+*.cache
+*.mo
+*.pot
+
+# Media upload locaux
+media/
+uploads/
+
+# VSCode
+.vscode/
+
+# Node modules si ton projet contient du front
+node_modules/
+
+# Build React/Vite si tu as le front dans le même repo
+dist/
+build/

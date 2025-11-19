@@ -1,16 +1,51 @@
-# React + Vite
+# Site Vitrine – React + TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un site vitrine moderne, responsive et performant développé avec **React**, **Vite**, **TailwindCSS**, et une architecture de composants propre.  
+Le site comprend :  
+- Page d’accueil  
+- Section Services  
+- Portfolio  
+- Témoignages  
+- Footer personnalisé  
+- Préparation à l’intégration future d’un chatbot FAQ  
+- Code optimisé, composants réutilisables, structure claire
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies utilisées
 
-## React Compiler
+- **React 18**
+- **Vite**
+- **TailwindCSS**
+- **React Router DOM**
+- **Lucide Icons** (si utilisés)
+- **Framer Motion** (si animations activées)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Structure du projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+mysite/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── assets/             # images, icônes, logos
+│   │   └── logo.png
+│   ├── components/         # composants réutilisables
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   └── HeroSection.jsx
+│   ├── pages/              # pages principales du site
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   ├── styles/             # CSS global si besoin
+│   │   └── index.css       # Tailwind directives
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.cjs
+├── postcss.config.cjs
+├── package.json
+└── vite.config.js
